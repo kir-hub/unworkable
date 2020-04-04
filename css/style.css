@@ -1,0 +1,66 @@
+/*@import "reset.css";*/
+
+
+
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#footer1{
+    height: 200px;
+    background-color: dodgerblue;
+    margin-top: auto;
+}
+
+#header1, #header2{
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: yellow;
+}
+
+.pageNav{
+    background-color: darkred;
+}
+
+a{
+    color: white;
+}
+
+#menuch{
+    display: none;
+}
+
+.pageNav{
+    position: fixed;
+    width: 300px;
+    top: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    left: -290px;
+    transition-property: left;
+    transition-duration: 0.5s;
+    z-index: 10000;
+
+}
+
+#menuch:checked ~ .pageNav {left:0;}
+
+.closeBack{
+    position: fixed;
+    z-index: 9000;
+    left:0;
+    bottom: 0;
+    top:0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+
+#menuch:checked ~ .closeBack{
+    display: block;
+}
+
+@media screenand (min-width: 1024px){
+
+}
